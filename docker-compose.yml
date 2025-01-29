@@ -3,7 +3,11 @@ services:
   node-server: #ชื่อ service
   # ตั้งชื่อ container (เหมือน --name)
     container_name: node
-    build: . # ตำแหน่ง dockerfile
+    # build: . # ตำแหน่ง dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
     ports:
       - "8000:8000" # map port ออกมา เหมือน -p ใน docker run 
   # db:
