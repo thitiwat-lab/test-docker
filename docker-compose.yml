@@ -3,8 +3,6 @@ services:
   node-server: #ชื่อ service
   # ตั้งชื่อ container (เหมือน --name)
     container_name: node
-    environment:
-        - PYTHONPATH=/code/project:/code/lib:/foo/bar
     build: . # ตำแหน่ง dockerfile
     restart: always
     ports:
