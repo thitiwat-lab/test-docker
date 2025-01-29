@@ -1,0 +1,19 @@
+version: '27' # กำหนด docker version
+services:
+  node-server: #ชื่อ service
+  # ตั้งชื่อ container (เหมือน --name)
+    container_name: node
+    build: . # ตำแหน่ง dockerfile
+    ports:
+      - "8000:8000" # map port ออกมา เหมือน -p ใน docker run 
+  # db:
+  #   image: mysql:latest
+  #   container_name: my_database_container
+  #   restart: always
+  #   environment:
+  #     MYSQL_DATABASE: db_restaurant
+  #     MYSQL_USER: root
+  #     MYSQL_PASSWORD: root1234
+  #     MYSQL_ROOT_HOST: "%"
+  #   ports:
+  #     - "3306:3306"
