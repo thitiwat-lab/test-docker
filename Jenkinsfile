@@ -26,12 +26,12 @@ pipeline {
             }
         }
 
-        stage('Build Application') {
-            steps {
-                echo 'Building the Next.js application'
-                sh 'sudo yarn run build'
-            }
-        }
+        // stage('Build Application') {
+        //     steps {
+        //         echo 'Building the Next.js application'
+        //         sh 'sudo yarn run build'
+        //     }
+        // }
         
         // stage('Deploy Application') {
         //     steps {
