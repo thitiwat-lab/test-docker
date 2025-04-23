@@ -2,9 +2,7 @@ version: '27'
 services:
   node-server:
     container_name: node
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    build: .
     restart: always
     ports:
       - "8000:8000"
