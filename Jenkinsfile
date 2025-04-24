@@ -26,19 +26,13 @@ pipeline {
             }
         }
 
-        // stage('Build Application') {
-        //     steps {
-        //         echo 'Building the Next.js application'
-        //         sh 'sudo yarn run build'
-        //     }
-        // }
-        
-        // stage('Deploy Application') {
-        //     steps {
-        //         echo 'Deploying to the server...'
-        //         // Replace with your deployment commands
-        //     }
-        // }
+        stage('Clean Docker') {
+            steps {
+                script {
+                    sh 'sudo docker-compose down || true'
+                }
+            }
+        }       
 
          stage('Build Docker Image') {
             steps {
